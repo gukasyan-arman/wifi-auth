@@ -154,15 +154,13 @@ body {
     }
 
     .rblock {
-        margin: 0 auto;
+        margin: 0 6%;
         padding: 80px 0 0 0;
         align-items: center;
     }
 
-    .rblock {
-        margin: 0 auto;
-        padding: 80px 0 0 0;
-        align-items: center;
+    .header {
+        display: none;
     }
 }
 
@@ -301,6 +299,15 @@ body {
     height: 18px;
     display: flex;
     align-items: center;
+}
+
+.show-on-mobile-only {
+    display: none;
+}
+@media (max-width: 800px) {
+    .show-on-mobile-only {
+        display: flex;
+    }
 }
 
 
