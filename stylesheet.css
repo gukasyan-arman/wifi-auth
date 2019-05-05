@@ -1,0 +1,307 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*****************************************************************************/
+/*******************************    Fonts    *********************************/
+/*****************************************************************************/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./font/subset-Montserrat-Light.eot');
+    src: url('./font/subset-Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('./font/subset-Montserrat-Light.woff2') format('woff2'),
+        url('./font/subset-Montserrat-Light.woff') format('woff'),
+        url('./font/subset-Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('./font/subset-NunitoSans-Light.eot');
+    src: url('./font/subset-NunitoSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('./font/subset-NunitoSans-Light.woff2') format('woff2'),
+        url('./font/subset-NunitoSans-Light.woff') format('woff'),
+        url('./font/subset-NunitoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./font/subset-Montserrat-Regular.eot');
+    src: url('./font/subset-Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./font/subset-Montserrat-Regular.woff2') format('woff2'),
+        url('./font/subset-Montserrat-Regular.woff') format('woff'),
+        url('./font/subset-Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./font/subset-Montserrat-Medium.eot');
+    src: url('./font/subset-Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./font/subset-Montserrat-Medium.woff2') format('woff2'),
+        url('./font/subset-Montserrat-Medium.woff') format('woff'),
+        url('./font/subset-Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*****************************************************************************/
+/*******************************   Layout    *********************************/
+/*****************************************************************************/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EEF2F4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+}
+
+.mainblock {
+    height: 600px;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #CFD2D4;
+    background: #fff;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+.header {
+    justify-content: flex-end;
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+.center {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+}
+
+.lblock {
+    display: flex;
+    width: 250px;
+    padding: 0 40px 0 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rblock { 
+    width: 310px;
+    padding: 96px 80px 0 40px;
+    flex-direction: column;
+    display: flex;
+    background: #fff;
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: white;
+    }
+
+    .lblock {
+        display: none;
+    }
+    
+    .mainblock {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .rblock {
+        margin: 0 auto;
+        padding: 80px 0 0 0;
+        align-items: center;
+    }
+
+    .rblock {
+        margin: 0 auto;
+        padding: 80px 0 0 0;
+        align-items: center;
+    }
+}
+
+/*****************************************************************************/
+/******************************* Components  *********************************/
+/*****************************************************************************/
+
+.title {
+    font-size: 24px;
+    color: #323232;
+    font-weight: 500;
+    margin-bottom: 32px;
+    font-family: 'Montserrat';
+}
+
+.text {
+    font-size: 12px;
+    color: #323232;
+    margin: 0 0 24px 0;
+    font-family: 'Montserrat';
+    line-height: 1.5;
+}
+
+.base-button {
+    height: 40px;
+    width: 290px;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.primary-button {
+    font-size: 15px;
+    color: #fff;
+    background-color: #3460df;
+    border: none;
+}
+
+.primary-button:hover {
+    background-color: #2d53c4;
+}
+
+.secondry-button {
+    font-size: 12px;
+    background-color: white;
+    border: solid 2px #e7e8ec;
+    color: #343b4c;
+}
+
+.secondry-button:hover {
+    background-color: #dedfe3;
+    border-color: #dedfe3;
+}
+
+.input {
+    height: 40px;
+    width: 290px;
+    font-size: 13px;
+    color: #a7b5c1;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 8px;
+    border: 1px solid;
+}
+
+.input::placeholder {
+    font-family: 'Nunito Sans';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    padding-left: 8px;
+    color: #d1dadf;
+}
+
+.input::-webkit-input-placeholder {
+    font-family: 'Nunito Sans';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    padding-left: 8px;
+    color: #d1dadf;
+}
+
+.input::-moz-placeholder {
+    font-family: 'Nunito Sans';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    padding-left: 8px;
+    color: #d1dadf;
+}
+.input:active {
+    border: solid 2px #3764dc; 
+}
+.input:active {
+    border: solid 2px #ff564e;
+}
+
+.base-rounded-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+    padding-left: 8px;
+    height: 24px;
+    border-radius: 31px;
+    background-color: #f5f7f8;
+    font-size: 9px;
+    color: #3460df;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.base-rounded-button:hover {
+    background-color: #e6e7e8;
+}
+
+.lang-switcher__lang {
+    text-transform: uppercase;
+    line-height: 11px;
+    margin-left: 4px;
+}
+
+.help {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 69px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+
+

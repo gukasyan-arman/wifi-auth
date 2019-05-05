@@ -2,202 +2,13 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
         <script type="text/javascript">
             
         </script>
         <style>
-            html, body, div, span, applet, object, iframe,
-            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-            a, abbr, acronym, address, big, cite, code,
-            del, dfn, em, img, ins, kbd, q, s, samp,
-            small, strike, strong, sub, sup, tt, var,
-            b, u, i, center,
-            dl, dt, dd, ol, ul, li,
-            fieldset, form, label, legend,
-            table, caption, tbody, tfoot, thead, tr, th, td,
-            article, aside, canvas, details, embed,
-            figure, figcaption, footer, header, hgroup,
-            menu, nav, output, ruby, section, summary,
-            time, mark, audio, video {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                font-size: 100%;
-                font: inherit;
-                vertical-align: baseline;
-            }
-
-            @font-face {
-                font-family: 'Montserrat';
-                src: url('./font/subset-Montserrat-Light.eot');
-                src: url('./font/subset-Montserrat-Light.eot?#iefix') format('embedded-opentype'),
-                    url('./font/subset-Montserrat-Light.woff2') format('woff2'),
-                    url('./font/subset-Montserrat-Light.woff') format('woff'),
-                    url('./font/subset-Montserrat-Light.ttf') format('truetype');
-                font-weight: 300;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: 'Nunito Sans';
-                src: url('./font/subset-NunitoSans-Light.eot');
-                src: url('./font/subset-NunitoSans-Light.eot?#iefix') format('embedded-opentype'),
-                    url('./font/subset-NunitoSans-Light.woff2') format('woff2'),
-                    url('./font/subset-NunitoSans-Light.woff') format('woff'),
-                    url('./font/subset-NunitoSans-Light.ttf') format('truetype');
-                font-weight: 300;
-                font-style: normal;
-            }
-
-            @font-face {
-                font-family: 'Montserrat';
-                src: url('./font/subset-Montserrat-Regular.eot');
-                src: url('./font/subset-Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-                    url('./font/subset-Montserrat-Regular.woff2') format('woff2'),
-                    url('./font/subset-Montserrat-Regular.woff') format('woff'),
-                    url('./font/subset-Montserrat-Regular.ttf') format('truetype');
-                font-weight: normal;
-                font-style: normal;
-            }
-
-
-            body {
-                margin: 0;
-                padding: 0;
-                background-color: #EEF2F4;
-            }
-
-            .container {
-                display: flex;
-                flex-wrap: wrap;
-                align-content: center;
-                height: 100%;
-            }
-
-            .mainblock {
-                height: 600px;
-                width: 800px;
-                margin: 0 auto;
-                border: 1px solid #CFD2D4;
-                background: #fff;
-                font-family: 'Montserrat';
-                font-weight: 400;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .lblock {
-                display: flex;
-                width: 250px;
-                padding: 0 40px 0 80px;
-                justify-content: center;
-            }
-
-            .rblock { 
-                width: 310px;
-                padding: 96px 32px 0 32px;
-                flex-direction: column;
-                display: flex;
-                background: #fff;
-            }           
-
-            .title {
-                font-size: 24px;
-                color: #323232;
-                font-weight: medium;
-                margin-bottom: 32px;
-                font-family: Montserrat;
-                font-weight: 500;
-            }
-            .text {
-                font-size: 12px;
-                color: #323232;
-                margin: 0 0 24px 0;
-                font-family: Montserrat;
-                font-weight: normal;
-            }
-            .phone-input {
-                height: 40px;
-                width: 290px;
-                font-size: 13px;
-                color: #a7b5c1;
-                border-radius: 4px;
-                outline: none;
-                margin-bottom: 8px;
-                border: 1px solid;
-            }
-
-            .phone-input::placeholder {
-                font-family: 'Nunito Sans';
-                font-size: 14px;
-                font-weight: 300;
-                letter-spacing: -0.2px;
-                color: #d1dadf;
-            }
-
-            .phone-input::-webkit-input-placeholder {
-                font-family: 'Nunito Sans';
-                font-size: 14px;
-                font-weight: 300;
-                letter-spacing: -0.2px;
-                color: #d1dadf;
-            }
-            
-            .phone-input::-moz-placeholder {
-                font-family: 'Nunito Sans';
-                font-size: 14px;
-                font-weight: 300;
-                letter-spacing: -0.2px;
-                color: #d1dadf;
-            }
-            .phone-input:active {
-                border: solid 2px #3764dc; 
-            }
-            .phone-input:active {
-                border: solid 2px #ff564e;
-            }
-
-            .header,
-            .footer {
-                width: 100%;
-                
-                height: 56px;
-                display: flex;
-                align-items: center;
-            }
-
-            .header {
-                justify-content: flex-end;
-            }
-
-            .footer {
-                justify-content: space-between;
-                margin-top: auto;
-            }
-
-            .center {
-                width: 100%;
-                flex-grow: 1;
-                display: flex;
-            }
-
-            .submit-button {
-                height: 40px;
-                width: 290px;
-                font-size: 13px;
-                color: #fff;
-                background-color: #3460df;
-                border-radius: 4px;
-                outline: none;
-                border: none;
+            .primary-button {
                 margin-bottom: 24px;
-
-            }
-
-            .submit-button:hover {
-                background-color: #2d53c4;
-                cursor: pointer;
-                transition: background 0.2s;
             }
 
             .offer {
@@ -206,83 +17,9 @@
                 font-family: Montserrat;
             }
 
-            .help {
-                width: 62px;
-                height: 24px;
-                border-radius: 31px;
-                background-color: #f5f7f8;
-                font-size: 9px;
-                color: #3460df;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 16px;
-            }
-            
-            .help:hover {
-                background-color: #e6e7e8;
-                cursor: pointer;
-                transition: background 0.2s;
-            }
-
-            .logo {
-                width: 62px;
-                height: 18px;
-                display: flex;
-                align-items: center;
-                margin-right: 18px;
-            }
-
-            .rusflag {
-                display: flex;
-                margin-left: 16px;
-                width: 50px;
-                height: 24px;
-                border-radius: 31px;
-                background-color: #f5f7f8;
-                align-items: center;
-                font-size: 10px;
-                font-weight: 500;
-                color: #3460df;
-                text-transform: uppercase;
-                justify-content: center;
-            }
-
-            .rusflag:hover {
-                background-color: #e6e7e8;
-                cursor: pointer;
-                transition: background 0.2s;
-            }
-
-            .lang {
-                line-height: 10px;
-                margin-left: 4px;
-            }
-
             @media (max-width: 800px) {
-                body {
-                    background-color: white;
-                }
-
-                .container,
-                .mainblock {
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                }
-
-                .center {
-                    flex-grow: 0;
-                }
-
-                .lblock {
-                    display: none;
-                }
-
                 .rblock {
-                    margin: 0 auto;
                     padding: 96px 0 0 0;
-                    align-items: center;
                 }
             }
         </style>
@@ -291,31 +28,30 @@
         <div class="container">
             <div class="mainblock">
                 <div class="header">
-                    <div class="help">Справка</div>  
+                    <div class="base-rounded-button help">Справка</div>  
                 </div>
                 <div class="center">
                     <div class="lblock">
                         <img class="lpicture" src="img/wifi.svg" />
                     </div>
 
-                    <form action="auth_by_call.html">
-                        <div class="rblock">
+                    <div class="rblock">
+                        <form action="auth_by_call.html">
                             <h1 class="title">Добро пожаловать в зону бесплатного Wi-Fi</h1>
                             <p class="text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
-                            <input class="phone-input" placeholder="+7 (900) 000 00 00">
+                            <input class="input" placeholder="+7 (900) 000 00 00">
 
-                            <button class="submit-button">Авторизоваться</button>
+                            <button class="base-button primary-button">Авторизоваться</button>
                             <p class="offer">Нажимая кнопку «Авторизоваться» вы принимаете условия оферты оператора.</p>
-                        </div>
-                    </form>
-                    
+                        </form>
+                    </div>
                 </div>
 
                 <div class="footer">
-                <div class='rusflag'>
-                        <img src='img/rus_flag.svg' width='15px' height='10px'>
-                        <span class='lang'>ru</span>
-                    </div>
+                <div class='base-rounded-button'>
+                    <img src='img/rus_flag.svg' width='15px' height='10px'>
+                    <span class='lang-switcher__lang'>ru</span>
+                </div>
                 <div class="logo">
                     <img src="img/alltelecom_logo.svg">
                 </div>
