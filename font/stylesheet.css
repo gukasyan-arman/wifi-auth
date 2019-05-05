@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subset-Montserrat-Regular.eot');
+    src: url('subset-Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('subset-Montserrat-Regular.woff2') format('woff2'),
+        url('subset-Montserrat-Regular.woff') format('woff'),
+        url('subset-Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subset-Montserrat-Medium.eot');
+    src: url('subset-Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('subset-Montserrat-Medium.woff2') format('woff2'),
+        url('subset-Montserrat-Medium.woff') format('woff'),
+        url('subset-Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('subset-NunitoSans-Light.eot');
+    src: url('subset-NunitoSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('subset-NunitoSans-Light.woff2') format('woff2'),
+        url('subset-NunitoSans-Light.woff') format('woff'),
+        url('subset-NunitoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('subset-Montserrat-Light.eot');
+    src: url('subset-Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('subset-Montserrat-Light.woff2') format('woff2'),
+        url('subset-Montserrat-Light.woff') format('woff'),
+        url('subset-Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
