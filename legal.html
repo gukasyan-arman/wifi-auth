@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <style>
+            .offer-block {
+                justify-content: center;
+                
+            }
+
+            .textblock {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                margin: 24px 150px 0;
+                width: 500px;
+                overflow: scroll;
+            }
+
+            .text {
+                font-family: "Montserrat";
+                font-size: 12px;
+                line-height: 1.5;
+                color: #323232;
+                margin-bottom: 32px;
+            }
+
+            .main-title {
+                font-family: "Montserrat";
+                font-size: 24px;
+                font-weight: 500;
+                color: #323232;
+                margin-bottom: 24px;
+            }
+
+            .subtitles {
+                font-family: "Montserrat";
+                font-size: 16px;
+                font-weight: 500;
+                color: #323232;
+                margin-bottom: 16px;
+            }
+
+
+            .mobile-close {
+                display: none;
+            }
+            
+
+            @media (max-width: 800px) {
+                body {
+                    background-color: white;
+                }
+
+                .container,
+                .offer-block {
+                    width: auto;
+                    height: auto;
+                    border: none;
+                    flex-grow: 0;
+                }
+
+                .offer-block {
+                    padding: 0 13px 0 13px;
+                }
+
+                .textblock {
+                    margin: 0 auto;
+                    width: 100%;
+                }
+
+                .desktop-close {
+                    display: none;
+                }
+
+                .mobile-close {
+                    display: flex;
+                    font-size: 24px;
+                    width: 24px;
+                    text-decoration: none;
+                    padding: 0;
+                    font-weight: 400;
+                }
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='mainblock offer-block'>
+                <div class='header'>
+                    <a href='' class='base-rounded-button mobile-close' >
+                        ×
+                    </a>  
+                    <a href='index.html' class='base-rounded-button'>Закрыть</a>  
+                </div>
+                <div class='textblock'>
+                    <h1 class='main-title'>Условия доступа к Wi-Fi сети</h1>
+                    <div class='text'>Настоящее Правила работы в Wi-Fi сети «Free WIFI» регламентирует отношения между ООО «Альянс Телеком» (далее — «Оператор»), предоставляющим услугу доступа к сети Интернет посредством использования сети беспроводного доступа Wi-Fi «Free WIFI» и физическим лицом, прошедшим процедуру идентификации (далее — «Пользователь»).
+                    </div>
+                    <h2 class='subtitles'>1. Доступ к Услуге</h2>
+                    <div class='text'>
+                        1.1. В соответствии с действующим законодательством Российской Федерации в области связи, при предоставлении услуг передачи данных и доступа к информационно-телекоммуникационной сети «Интернет» Оператором осуществляется идентификация Пользователя и используемого им оконечного оборудования. Для получения доступа к сети беспроводного доступа «Free WIFI» Пользователю необходимо получить пароль для сети Wi-Fi путем получения или отправки СМС на выделенный номер Оператора.
+                    </div>
+                    <div class="text">
+                        1.2. Подключить своё пользовательское (оконечное) оборудование к сети беспроводного доступа «Free WIFI».
+                    </div>
+                    <h2 class='subtitles'>2. Описание Услуги</h2>
+                    <div class='text'>2.1. Сеть беспроводного доступа Wi-Fi &quot;Free WIFI&quot; представляет Пользователям доступ к сети Интернет (далее – «Услуга»). Услуга предоставляется только при нахождении Пользователя в зоне уверенного приёма радиосигнала точек доступа сети &quot;Free WIFI&quot;.
+                    </div>
+                    <div class='text'>2.2. Услуга предоставляется Пользователям на безвозмездной основе на условиях настоящего Соглашения.
+                    </div>
+                </div>
+                <div class='footer'>
+                   <div class='base-rounded-button'>
+                        <img src='img/rus_flag.svg' width='15px' height='10px'>
+                        <span class='lang-switcher__lang'>ru</span>
+                    </div>
+                    <div class='logo'>
+                        <img src='img/alltelecom_logo.svg'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
