@@ -52,6 +52,22 @@
             .user-number {
                 color: #3460df;
             }
+            @media (max-width: 800px) {
+                .click-for-call {
+                    background-color: #28bc00;
+                    margin-bottom: 8px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            @media (min-width: 800px) {
+                .click-for-call {
+                    display: none;
+                }
+            }
         </style>
     </head>
     <body>
@@ -76,6 +92,7 @@
                             Ожидаем звонка с номера
                             <span class='user-number' id='user-number'>+79525727392</span>
                         </div>
+                        <a class='base-button click-for-call' href="tel:+78633092550">Позвонить</a>
                         <button class='base-button secondry-button'>Ввести другой номер</button>
                     </div>
                 </div>
