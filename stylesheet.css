@@ -185,6 +185,13 @@ body {
     line-height: 1.5;
 }
 
+.disclaimer {
+    font-size: 10px;
+    color: #8d96b0;
+    font-family: 'Montserrat';
+    }
+
+
 .base-button {
     height: 40px;
     width: 290px;
@@ -300,6 +307,10 @@ body {
     height: 18px;
     display: flex;
     align-items: center;
+}
+
+span {
+    color: #315be2;
 }
 
 .show-on-mobile-only {

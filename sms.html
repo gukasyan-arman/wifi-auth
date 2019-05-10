@@ -16,15 +16,15 @@
                 font-family: 'Montserrat';
             }
 
+            .base-button {
+                margin-bottom: 8px;
+            }
+
             @media (max-width: 800px) {
                 .rblock {
                     padding: 96px 0 0 0;
                 }
 
-                .base-button,
-                .primary-button {
-                    display: none;
-                }
                 
             }
         </style>
@@ -37,18 +37,19 @@
                 </div>
                 <div class="center">
                     <div class="lblock">
-                        <img class="lpicture" src="img/wifi.svg" />
+                        <img class="lpicture" src="img/sms.svg" />
                     </div>
 
                     <div class="rblock">
                         <form action="auth_by_call.html">
-                            <h1 class="title">Добро пожаловать в зону бесплатного Wi-Fi</h1>
-                            <p class="text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
-                            <input class="input" placeholder="+7 (900) 000 00 00">
+                            <h1 class="title">Введите код из SMS сообщения</h1>
+                            <input class="input" placeholder="0000">
+                            <p class="text">Мы отправили смс на номер <span class='user-number' id='user-number'>+79282790879
+                            </span> с четырехзначным кодом потдверждения. Введите код в поле ввода и нажмите «Подтвердить».</p>
 
-                            <button class="base-button primary-button">Авторизоваться</button>
-
-                            <p class="disclaimer">Нажимая кнопку «Авторизоваться» вы принимаете условия <a href="legal.html">оферты оператора</a>. Услуга доступна для номеров телефонов, зарегистрированных на территории РФ.</p>
+                            <button class="base-button primary-button">Подтвердить</button>
+                            <button class='base-button secondry-button'>Ввести другой номер</button>
+                            
                         </form>
                     </div>
                 </div>
