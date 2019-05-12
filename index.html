@@ -2,10 +2,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <script type="text/javascript">
-            
-        </script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">     
+        <script src="https://unpkg.com/imask"></script>
         <style>
             .primary-button {
                 margin-bottom: 24px;
@@ -41,15 +39,13 @@
                     </div>
 
                     <div class="rblock">
-                        <form action="auth_by_call.html">
-                            <h1 class="title">Добро пожаловать в зону бесплатного Wi-Fi</h1>
-                            <p class="text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
-                            <input class="input" placeholder="+7 (900) 000 00 00">
-
+                        <h1 class="title">Добро пожаловать в зону бесплатного Wi-Fi</h1>
+                        <p class="text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
+                        <form action="">
+                            <input id="phone-number" class="input" placeholder="+7 (900) 000 00 00">
                             <button class="base-button primary-button">Авторизоваться</button>
-
-                            <p class="disclaimer">Нажимая кнопку «Авторизоваться» вы принимаете условия <a href="legal.html">оферты оператора</a>. Услуга доступна для номеров телефонов, зарегистрированных на территории РФ.</p>
                         </form>
+                        <p class="disclaimer">Нажимая кнопку «Авторизоваться» вы принимаете условия <a href="legal.html">оферты оператора</a>. Услуга доступна для номеров телефонов, зарегистрированных на территории РФ.</p>
                     </div>
                 </div>
 
@@ -65,5 +61,13 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            let element = document.getElementById('phone-number');
+            let maskOptions = {
+                mask: '+{7}(000)000-00-00'
+            };
+            let mask = IMask(element, maskOptions);
+            mask.on("complete", function () {console.log(mask.unmaskedValue)});
+        </script>
     </body>
 <html>

@@ -6,6 +6,7 @@
         <script type="text/javascript">
             
         </script>
+        <script src="https://unpkg.com/imask"></script>
         <style>
             .primary-button {
                 margin-bottom: 24px;
@@ -41,16 +42,14 @@
                     </div>
 
                     <div class="rblock">
-                        <form action="auth_by_call.html">
-                            <h1 class="title">Введите код из SMS сообщения</h1>
-                            <input class="input" placeholder="0000">
+                        <h1 class="title">Введите код из SMS сообщения</h1>
+                        <form action="">
+                            <input id="code" class="input" placeholder="0000">
                             <p class="text">Мы отправили смс на номер <span class='user-number' id='user-number'>+79282790879
                             </span> с четырехзначным кодом потдверждения. Введите код в поле ввода и нажмите «Подтвердить».</p>
-
                             <button class="base-button primary-button">Подтвердить</button>
-                            <button class='base-button secondry-button'>Ввести другой номер</button>
-                            
                         </form>
+                        <button class='base-button secondry-button'>Ввести другой номер</button>
                     </div>
                 </div>
 
@@ -66,5 +65,13 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            let element = document.getElementById('code');
+            let maskOptions = {
+                mask: '0000'
+            };
+            let mask = IMask(element, maskOptions);
+            mask.on("complete", function () {console.log(mask.unmaskedValue)});
+        </script>
     </body>
 <html>
