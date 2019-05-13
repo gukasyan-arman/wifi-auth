@@ -157,7 +157,6 @@ body {
         width: 100%;
         margin: 0 5%;
         padding: 80px 0 0 0;
-        align-items: center;
     }
 
     .header {
@@ -173,14 +172,13 @@ body {
     font-size: 24px;
     color: #323232;
     font-weight: 500;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     font-family: 'Montserrat';
 }
 
 .text {
     font-size: 12px;
     color: #323232;
-    margin: 0 0 24px 0;
     font-family: 'Montserrat';
     line-height: 1.5;
 }
@@ -230,11 +228,12 @@ body {
     height: 40px;
     width: 290px;
     font-size: 13px;
-    color: #a7b5c1;
+    color: #262626;
     border-radius: 4px;
     outline: none;
     margin-bottom: 8px;
-    border: 1px solid;
+    border: 1px solid #dcdfe7;
+    padding-left: 8px;
 }
 
 .input::placeholder {
@@ -242,7 +241,6 @@ body {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: -0.2px;
-    padding-left: 8px;
     color: #d1dadf;
 }
 
@@ -251,7 +249,6 @@ body {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: -0.2px;
-    padding-left: 8px;
     color: #d1dadf;
 }
 
@@ -260,15 +257,14 @@ body {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: -0.2px;
-    padding-left: 8px;
     color: #d1dadf;
 }
-.input:active {
+/*.input:active {
     border: solid 2px #3764dc; 
 }
 .input:active {
     border: solid 2px #ff564e;
-}
+}*/
 
 .base-rounded-button {
     display: flex;

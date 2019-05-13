@@ -6,12 +6,16 @@
         <script src="https://unpkg.com/imask"></script>
         <style>
             .primary-button {
-                margin-bottom: 24px;
+                margin-bottom: 16px;
             }
 
             a {
                 color: #8d96b0;
                 font-family: 'Montserrat';
+            }
+
+            .index-text {
+                margin-bottom: 24px;
             }
 
             @media (max-width: 800px) {
@@ -21,9 +25,12 @@
 
                 .base-button,
                 .primary-button {
-                    display: none;
+                    width: 100%;
                 }
                 
+                .input {
+                    width: 100%;
+                }
             }
         </style>
     </head>
@@ -40,7 +47,7 @@
 
                     <div class="rblock">
                         <h1 class="title">Добро пожаловать в зону бесплатного Wi-Fi</h1>
-                        <p class="text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
+                        <p class="text index-text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
                         <form action="">
                             <input id="phone-number" class="input" placeholder="+7 (900) 000 00 00">
                             <button class="base-button primary-button">Авторизоваться</button>
