@@ -244,6 +244,10 @@ body {
     color: #d1dadf;
 }
 
+.input:focus {
+    border: solid 2px #3764dc;
+}
+
 .input::-webkit-input-placeholder {
     font-family: 'Nunito Sans';
     font-size: 14px;
