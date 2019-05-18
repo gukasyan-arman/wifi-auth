@@ -183,6 +183,18 @@ body {
     line-height: 1.5;
 }
 
+.text.invalid-text {
+    display: none;
+    color: #ff564e;
+    font-size: 10px;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+.text.invalid-text.visible {
+    display: block;
+}
+
 .disclaimer {
     font-size: 10px;
     color: #8d96b0;
@@ -246,6 +258,7 @@ body {
 
 .input:focus {
     border: solid 2px #3764dc;
+    padding-left: 7px;
 }
 
 .input::-webkit-input-placeholder {
@@ -262,6 +275,12 @@ body {
     font-weight: 300;
     letter-spacing: -0.2px;
     color: #d1dadf;
+}
+
+.input.invalid {
+    border-color: red;
+    border-width: 2px;
+    padding-left: 7px;
 }
 /*.input:active {
     border: solid 2px #3764dc; 
