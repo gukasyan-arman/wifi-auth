@@ -278,16 +278,10 @@ body {
 }
 
 .input.invalid {
-    border-color: red;
+    border-color: #ff564e;
     border-width: 2px;
     padding-left: 7px;
 }
-/*.input:active {
-    border: solid 2px #3764dc; 
-}
-.input:active {
-    border: solid 2px #ff564e;
-}*/
 
 .base-rounded-button {
     display: flex;
@@ -321,12 +315,24 @@ body {
     text-decoration: underline;
 }
 
+.help-phone {
+    display: none;
+}
 .logo {
     width: 69px;
     height: 18px;
     display: flex;
     align-items: center;
 }
+
+.link-button {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 span {
     color: #315be2;

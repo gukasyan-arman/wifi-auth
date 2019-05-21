@@ -80,6 +80,12 @@
                 .rblock {
                     padding: 24px 0;
                 }
+
+                .help-phone {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
 
             @media (min-width: 800px) {
@@ -93,7 +99,7 @@
         <div class='container'>
             <div class='mainblock'>
                 <div class='header'>
-                    <div class='base-rounded-button help'>Справка</div>  
+                    <a class="base-rounded-button help" href="help.html">Справка</a> 
                 </div>
                 <div class='center'>
                     <div class='lblock'>
@@ -112,7 +118,7 @@
                             <span class='user-number' id='user-number'>+79525727392</span>
                         </div>
                         <a class='base-button click-for-call' href="tel:+78633092550">Позвонить</a>
-                        <button class='base-button secondry-button'>Ввести другой номер</button>
+                        <a class='base-button secondry-button link-button' href='index.html'>Ввести другой номер</a>
                     </div>
                 </div>
 
@@ -124,7 +130,7 @@
                 <div class='logo'>
                     <img src='img/alltelecom_logo.svg'>
                 </div>
-                <div class="base-rounded-button help show-on-mobile-only">Справка</div>  
+                <a class="base-rounded-button help-phone" href="help.html">Справка</a>
                 </div>
                 
             </div>

@@ -42,7 +42,6 @@
                 margin-bottom: 16px;
             }
 
-
             .mobile-close {
                 display: none;
             }
@@ -53,26 +52,15 @@
                     background-color: white;
                 }
 
-                .container,
                 .offer-block {
-                    width: auto;
-                    height: auto;
-                    border: none;
-                    flex-grow: 0;
-                    height: 100%;
-                }
-
-                .offer-block {
-                    padding: 0 13px 0 13px;
-                }
-
-                .textblock {
-                    margin: 0 auto;
                     width: 100%;
                 }
 
-                .desktop-close {
-                    display: none;
+                .textblock {
+                    margin: 0;
+                    width: 100%;
+                    padding: 12px 13px 0 13px;
+                    box-sizing: border-box;
                 }
 
                 .mobile-close {
@@ -82,6 +70,9 @@
                     text-decoration: none;
                     padding: 0;
                     font-weight: 400;
+                    align-self: flex-end;
+                    margin-right: 13px;
+                    margin-top: 12px;
                 }
 
                 .footer {
@@ -94,12 +85,12 @@
     <body>
         <div class='container'>
             <div class='mainblock offer-block'>
-                <div class='header'>
-                    <a href='' class='base-rounded-button mobile-close' >
-                        ×
-                    </a>  
-                    <a href='index.html' class='base-rounded-button'>Закрыть</a>  
+                <div class='header'> 
+                    <a href="javascript:history.back()" class='base-rounded-button'>Закрыть</a>  
                 </div>
+                <a href="javascript:history.back()" class='base-rounded-button mobile-close' >
+                    ×
+                </a> 
                 <div class='textblock'>
                     <h1 class='main-title'>Условия доступа к Wi-Fi сети</h1>
                     <div class='text'>Настоящее Правила работы в Wi-Fi сети «Free WIFI» регламентирует отношения между ООО «Альянс Телеком» (далее — «Оператор»), предоставляющим услугу доступа к сети Интернет посредством использования сети беспроводного доступа Wi-Fi «Free WIFI» и физическим лицом, прошедшим процедуру идентификации (далее — «Пользователь»).
