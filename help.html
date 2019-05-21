@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta charset='utf-8'>
+        <style>
+        html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('./font/subset-Montserrat-Light.eot');
+                src: url('./font/subset-Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+                    url('./font/subset-Montserrat-Light.woff2') format('woff2'),
+                    url('./font/subset-Montserrat-Light.woff') format('woff'),
+                    url('./font/subset-Montserrat-Light.ttf') format('truetype');
+                font-weight: 300;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Nunito Sans';
+                src: url('./font/subset-NunitoSans-Light.eot');
+                src: url('./font/subset-NunitoSans-Light.eot?#iefix') format('embedded-opentype'),
+                    url('./font/subset-NunitoSans-Light.woff2') format('woff2'),
+                    url('./font/subset-NunitoSans-Light.woff') format('woff'),
+                    url('./font/subset-NunitoSans-Light.ttf') format('truetype');
+                font-weight: 300;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('./font/subset-Montserrat-Regular.eot');
+                src: url('./font/subset-Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+                    url('./font/subset-Montserrat-Regular.woff2') format('woff2'),
+                    url('./font/subset-Montserrat-Regular.woff') format('woff'),
+                    url('./font/subset-Montserrat-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #EEF2F4;
+            }
+            
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                height: 100%;
+            }
+
+            .help-block {
+                height: 600px;
+                width: 800px;
+                margin: 0 auto;
+                border: 1px solid #CFD2D4;
+                background: #fff;
+                font-family: 'Montserrat';
+                font-weight: 400;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .textblock {
+                display: flex;
+                flex-direction: column;
+                margin: 24px 150px 0;
+                width: 500px;
+            }
+
+            .text {
+                font-family: Montserrat;
+                font-size: 12px;
+                line-height: 1.5;
+                color: #323232;
+                margin-bottom: 32px;
+            }
+
+            .main-title {
+                font-family: Montserrat;
+                font-size: 24px;
+                font-weight: 500;
+                color: #323232;
+                margin-bottom: 24px;
+            }
+
+            .subtitles {
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: 500;
+                color: #323232;
+                margin-bottom: 16px;
+            }
+            .header,
+            .footer {
+                width: 100%;  
+                height: 56px;
+                display: flex;
+                align-items: center;
+            }
+            .header {
+                justify-content: flex-end;
+            }
+
+            .footer {
+                justify-content: space-between;
+                margin-top: auto;
+            }
+
+            .desktop-close {
+                width: 62px;
+                height: 24px;
+                border-radius: 31px;
+                background-color: #f5f7f8;
+                font-size: 9px;
+                color: #3460df;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 16px;
+                text-decoration: none;
+            }
+
+            .desktop-close:hover {
+                background-color: #e6e7e8;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+
+            .mobile-close {
+                display: none;
+            }
+            
+            .logo {
+                width: 62px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                margin-right: 18px;
+            }
+
+            .rusflag {
+                display: flex;
+                margin-left: 16px;
+                width: 50px;
+                height: 24px;
+                border-radius: 31px;
+                background-color: #f5f7f8;
+                align-items: center;
+                font-size: 10px;
+                font-weight: 500;
+                color: #3460df;
+                text-transform: uppercase;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .rusflag:hover {
+                background-color: #e6e7e8;
+                cursor: pointer;
+                transition: background 0.2s;
+            }
+
+            .lang {
+                line-height: 10px;
+                margin-left: 4px;
+            }
+
+            @media (max-width: 800px) {
+                body {
+                    background-color: white;
+                }
+
+                .container,
+                .help-block {
+                    width: auto;
+                    height: auto;
+                    border: none;
+                    flex-grow: 0;
+                }
+
+                .help-block {
+                    padding: 0 13px 0 13px;
+                }
+
+                .textblock {
+                    margin: 0 auto;
+                    width: 100%;
+                }
+
+                .footer {
+                    display: none;
+                }
+
+                .desktop-close {
+                    display: none;
+                }
+
+                .mobile-close {
+                    background-color: #f5f7f8;
+                    font-size: 24px;
+                    color: #3460df;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 31px;
+                    text-decoration: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='help-block'>
+                <div class='header'>
+                    <a href="javascript:history.back()" class='mobile-close'>
+                        ×
+                    </a>  
+                    <a href="javascript:history.back()" class='desktop-close'>Закрыть</a>  
+                </div>
+                <div class='textblock'>
+                    <h1 class='main-title'>Справка</h1>
+                    <div class='text'>Согласно постановлению правительства №758 от 07.31.2014 все пользователи публичных сетей обязаны пройти идентификацию. Для регистрации Вам необходимо указать номер телефона на который вы хотите зарегистрировать свое устройство (смартфон, плашет, ноутбук и т.д.)
+                    </div>
+                    <h2 class='subtitles'>Регистрация по исходящему звонку</h2>
+                    <div class='text'>
+                        Для регистрации методом исходящего звонка вам необходимо указать свой номер и затем нажать на кнопку «Авторизоваться».  После нажатия кнопки вы будете переадресованы на страницу с указанием номера телефона, на который вам нужно будет позвонить с того телефона, который вы указали при регистрации. Вызов для всех абонентов — бесплатный.
+                    </div>
+                    <h2 class='subtitles'>Регистрация через СМС</h2>
+                    <div class='text'>Для регистрации с помощью SMS вам необходимо указать свой номер и затем нажать на кнопку с изображение почтового конверта  После нажатия кнопки Вам будет отправлен код подтверждения и вы будете переадресованы на страницу ввода кода. Полученный код из СМС нужно бужет ввеcти в соответствующее поле и нажать кнопку  «Подтвердить».
+                    </div>
+                </div>
+                <div class='footer'>
+                    <div class='rusflag'>
+                        <img src='img/rus_flag.svg' width='15px' height='10px'>
+                        <span class='lang'>ru</span>
+                    </div>
+                    <div class='logo'>
+                        <img src='img/alltelecom_logo.svg'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
