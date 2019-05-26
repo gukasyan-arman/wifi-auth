@@ -65,7 +65,7 @@
                         <h1 class="title">Введите код из SMS сообщения</h1>
                         <form id="smsForm" action="auth_by_call.html" onsubmit="return false">
                             <input id="code" class="input" placeholder="0000" autofocus>
-                            <p id="invalid-hint" class="text invalid-text">Неверно введён смс-код мобильного телефона</p>
+                            <p id="invalid-hint" class="text invalid-text">Sms-код должен содержать четыре цифры</p>
                             <p class="text sms-text">Мы отправили смс на номер <span class='user-number' id='user-number'>+79282790879
                             </span> с четырехзначным кодом потдверждения. Введите код в поле ввода и нажмите «Подтвердить».</p>
                             <button class="base-button primary-button" onclick="smsValidate()" type="submit" value="Submit" for="phone-code">Подтвердить</button>
@@ -79,9 +79,9 @@
                     <img src='img/rus_flag.svg' width='15px' height='10px'>
                     <span class='lang-switcher__lang'>ru</span>
                 </div>
-                <div class="logo">
-                    <img src="img/alltelecom_logo.svg">
-                </div>
+                
+                    <img class="logo" src="img/alltelecom_logo_new.svg">
+                
                 <a class="base-rounded-button help-phone" href="help.html">Справка</a>
                 </div>
             </div>
