@@ -76,13 +76,31 @@
             </div>
         </div>
         <script type="text/javascript">
-            let inputNumber = document.getElementById('phone-number')
-            let invalidHint = document.getElementById('invalid-hint')
+            var inputNumber = document.getElementById('phone-number')
+            var invalidHint = document.getElementById('invalid-hint')
 
-            let maskOptions = {
-                mask: '+{7}({9}00)000-00-00'
+            var maskOptions = {
+              mask: [
+                {
+                  mask: '+7(000)000-00-00',
+                  lazy: true,
+                },
+                {
+                  mask: '8(000)000-00-00',
+                  lazy: true
+                }
+              ],
+              dispatch: function (appended, dynamicMasked) {
+                var value = dynamicMasked.value + appended
+                if(value[0] == '8') {
+                  return dynamicMasked.compiledMasks[1]
+                } else {
+                  return dynamicMasked.compiledMasks[0]
+                }
+              }
             }
-            let mask = IMask(inputNumber, maskOptions)
+
+            var mask = IMask(inputNumber, maskOptions)
 
             mask.on("complete", function () {
                 if (inputNumber.classList.contains("invalid")) {
