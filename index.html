@@ -27,11 +27,11 @@
                 .primary-button {
                     width: 100%;
                 }
-                
+
                 .input {
                     width: 100%;
                 }
-                
+
                 .help-phone {
                     display: flex;
                     justify-content: center;
@@ -40,11 +40,11 @@
             }
         </style>
     </head>
-    <body>
+    <body ontouchstart="">
         <div class="container">
             <div class="mainblock">
                 <div class="header">
-                    <a class="base-rounded-button help" href="help.html">Справка</a>   
+                    <a class="base-rounded-button help" href="help.html">Справка</a>
                 </div>
                 <div class="center">
                     <div class="lblock">
@@ -55,7 +55,7 @@
                         <h1 class="title">Добро пожаловать в зону бесплатного Wi-Fi</h1>
                         <p class="text index-text">Введите номер мобильного телефона, чтобы получить доступ в Интернет через Wi-Fi сеть.</p>
                         <form id="phoneForm" action="auth_by_call.html" onsubmit="return false">
-                            <input id="phone-number" class="input" placeholder="+7 (900) 000 00 00" autofocus>
+                            <input id="phone-number" class="input" type="tel" autocomplete="tel" placeholder="+7&thinsp;(900)&thinsp;000 00 00" autofocus>
                             <p id="invalid-hint" class="text invalid-text">Неверно введён номер мобильного телефона</p>
                             <button class="base-button primary-button" onclick="phoneValidate()" type="submit" value="Submit" for="phone-number">Авторизоваться</button>
                         </form>
@@ -82,11 +82,11 @@
             var maskOptions = {
               mask: [
                 {
-                  mask: '+7(000)000-00-00',
+                  mask: '+7\u2009(000)\u2009000-00-00',
                   lazy: true,
                 },
                 {
-                  mask: '8(000)000-00-00',
+                  mask: '8\u2009(000)\u2009000-00-00',
                   lazy: true
                 }
               ],

@@ -130,7 +130,7 @@ body {
     flex-direction: column;
 }
 
-.rblock { 
+.rblock {
     width: 310px;
     padding: 96px 80px 0 40px;
     flex-direction: column;
@@ -146,7 +146,7 @@ body {
     .lblock {
         display: none;
     }
-    
+
     .mainblock {
         width: 100%;
         height: 100%;
@@ -246,6 +246,9 @@ body {
     margin-bottom: 8px;
     border: 1px solid #dcdfe7;
     padding-left: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .input::placeholder {
@@ -267,6 +270,7 @@ body {
     font-weight: 300;
     letter-spacing: -0.2px;
     color: #d1dadf;
+    line-height: 18px;
 }
 
 .input::-moz-placeholder {
