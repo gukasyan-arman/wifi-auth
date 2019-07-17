@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script type="text/javascript">
+
+        </script>
+        <script src="https://unpkg.com/imask"></script>
+        <style>
+            .primary-button {
+                margin-bottom: 24px;
+            }
+
+            a {
+                color: #8d96b0;
+                font-family: 'Montserrat';
+            }
+
+            .sms-text {
+                margin-bottom: 24px;
+            }
+
+            .base-button {
+                margin-bottom: 8px;
+            }
+
+            .phone-number {
+                width: 287px;
+                height: 40px;
+                font-size: 32px;
+                font-weight: 300;
+                line-height: 1.25;
+                letter-spacing: -0.8px;
+                color: #424242;
+                margin-bottom: 24px;
+                font-family: 'Nunito Sans';
+            }
+
+            .wait-nember {
+                font-size: 12px;
+                margin-bottom: 24px;
+                color: #323232;
+            }
+
+            .user-number {
+                color: #3460df;
+            }
+
+            .auth-text {
+                margin-bottom: 8px;
+            }
+            @media (max-width: 800px) {
+                .click-for-call {
+                    background-color: #28bc00;
+                    margin-bottom: 8px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    width: 100%
+                }
+
+                .base-button,
+                .primary-button {
+                    width: 100%;
+                }
+
+                .wait-nember {
+                    margin-bottom: 32px;
+                }
+                .rblock {
+                    padding: 24px 0;
+                }
+
+                .help-phone {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            b {
+              font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="mainblock">
+                <div class="header">
+                    <a class="base-rounded-button" href="help.html">Справка</a>
+                </div>
+                <div class="center">
+                    <div class="lblock">
+                        <img class="lpicture" src="img/sms.svg" />
+                    </div>
+
+                    <div class='rblock'>
+                        <h1 class='title'>Отравьте SMS со своего телефона по номеру</h1>
+                        <p class='phone-number'>+7 (863) 309-25-50</p>
+                        <p class='text auth-text'>Отравьте SMS на этот номер с кодом <b>123456</b>. Это необходимо для того, чтобы подтвердить введенный номер телефона. SMS платное.</p>
+                        <div class="wait-nember">
+                            Ожидаем SMS с номера
+                            <span class='user-number' id='user-number'>+79525727392</span>
+                        </div>
+                        <a class='base-button secondry-button link-button' href='index.html'>Ввести другой номер</a>
+                    </div>
+                </div>
+
+                <div class="footer">
+                <div class='base-rounded-button'>
+                    <img src='img/rus_flag.svg' width='15px' height='10px'>
+                    <span class='lang-switcher__lang'>ru</span>
+                </div>
+
+                    <img class="logo" src="img/alltelecom_logo_new.svg">
+
+                <a class="base-rounded-button help-phone" href="help.html">Справка</a>
+                </div>
+            </div>
+        </div>
+    </body>
+<html>
