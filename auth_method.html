@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css?1">
+        <script src="imask.js"></script>
+        <style>
+            .primary-button {
+                margin-top: 24px;
+                margin-bottom: 16px;
+            }
+
+            a {
+                color: #8d96b0;
+                font-family: 'Montserrat';
+            }
+
+            .index-text {
+                margin-bottom: 24px;
+            }
+
+            @media (max-width: 800px) {
+                .rblock {
+                    padding: 24px 0 0 0;
+                }
+
+                .base-button,
+                .primary-button {
+                    width: 100%;
+                }
+
+                .help-phone {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .radio_container {
+                  width: 100% !important;
+                }
+            }
+
+            .radio_container {
+              display: block;
+              position: relative;
+              cursor: pointer;
+              font-size: 13px;
+              height: 48px;
+              width: 288px;
+              margin-bottom: 8px;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              border: 1px solid #D7DFE3;
+              border-radius: 8px;
+              cursor: pointer;
+            }
+
+            .radio_container.radio_container__active {
+              border: 1px solid #3A68D9;
+            }
+
+            .radio_container input[type=radio]{
+              position: absolute;
+              visibility: hidden;
+            }
+
+            .radio_container label{
+              display: block;
+              position: relative;
+              font-weight: 500;
+              font-size: 13px;
+              padding: 0 25px 0px 48px;
+              line-height: 48px;
+              height: 48px;
+              z-index: 9;
+              cursor: pointer;
+              -webkit-transition: all 0.25s linear;
+            }
+
+            .radio_container .check{
+              display: block;
+              position: absolute;
+              border: 1px solid #AAAAAA;
+              border-radius: 100%;
+              height: 16px;
+              width: 16px;
+              top: 16px;
+              left: 16px;
+            	z-index: 5;
+            	transition: border .25s linear;
+            	-webkit-transition: border .25s linear;
+            }
+
+            .radio_container .check {
+              border: 1px solid #D1DADF;
+            }
+
+            .radio_container .check::before {
+              display: block;
+              position: absolute;
+            	content: '';
+              border-radius: 100%;
+              height: 6px;
+              width: 6px;
+              top: 5px;
+              left: 5px;
+              margin: auto;
+            	transition: background 0.25s linear;
+            	-webkit-transition: background 0.25s linear;
+            }
+
+            input[type=radio]:checked ~ .check {
+              background-color: #fff;
+              border: 1px solid #3764DC;
+            }
+
+            input[type=radio]:checked ~ .check::before{
+              background: #3764DC;
+            }
+
+            input[type=radio]:checked ~ label{
+              color: #3764DC;
+            }
+
+        </style>
+    </head>
+    <body ontouchstart="">
+        <div class="container">
+            <div class="mainblock">
+                <div class="header">
+                    <a class="base-rounded-button help" href="help.html">Справка</a>
+                </div>
+                <div class="center">
+                    <div class="lblock">
+                        <img class="lpicture" src="img/wifi.svg" />
+                    </div>
+
+                    <div class="rblock">
+                        <h1 class="title">Выберете один из способов авторизации</h1>
+                        <form id="authMethodForm" action="auth_by_call.html">
+                          <div class="radio_container radio_container__active">
+                            <input type="radio" id="originate_call" name="auth_type" value="originate_call"
+                                   checked>
+                            <label for="originate_call">Исходящий звонок</label>
+                            <div class="check"></div>
+                          </div>
+
+                          <div class="radio_container">
+                            <input type="radio" id="send_sms" name="auth_type" value="send_sms">
+                            <label for="send_sms">Отправить SMS</label>
+                            <div class="check"></div>
+                          </div>
+
+                          <div class="radio_container">
+                            <input type="radio" id="recive_sms" name="auth_type" value="recive_sms">
+                            <label for="recive_sms">Получить SMS</label>
+                            <div class="check"></div>
+                          </div>
+                          <button class="base-button primary-button" type="submit" value="Submit">Далее</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer">
+                <div class='base-rounded-button'>
+                    <img src='img/rus_flag.svg' width='15px' height='10px'>
+                    <span class='lang-switcher__lang'>ru</span>
+                </div>
+                <div class="logo">
+                    <img src="img/alltelecom_logo_new.svg">
+                </div>
+                <a class="base-rounded-button help-phone" href="help.html">Справка</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+          (function(e){
+            e.closest = e.closest || function(css){
+              var node = this;
+
+              while (node) {
+                if (node.matches(css)) return node;
+                else node = node.parentElement;
+              }
+              return null;
+            }
+          })(Element.prototype);
+
+          function hasClass(ele,cls) {
+            return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+          }
+
+          function addClass(ele,cls) {
+            if (!hasClass(ele,cls)) ele.className += " "+cls;
+          }
+
+          function removeClass(ele,cls) {
+            if (hasClass(ele,cls)) {
+              var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+              ele.className=ele.className.replace(reg,' ');
+            }
+          }
+
+          var rad = document.getElementsByName('auth_type');
+          var prev = document.getElementsByClassName('radio_container__active')[0] || null
+          for (var i = 0; i < rad.length; i++) {
+            rad[i].addEventListener('change', function() {
+                if (prev) {
+                  removeClass(prev.closest('.radio_container'), 'radio_container__active');
+                }
+
+                if (this !== prev) {
+                  prev = this;
+                }
+
+                addClass(this.closest('.radio_container'), 'radio_container__active');
+            });
+          }
+        </script>
+    </body>
+<html>
